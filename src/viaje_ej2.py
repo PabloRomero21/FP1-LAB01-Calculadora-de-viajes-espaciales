@@ -3,6 +3,8 @@ velocidad_kmh = int(input("¿A qué velocidad vas a viajar (km/h)?"))
 tiempo_minutos = (distancia_km / velocidad_kmh) * 60
 tiempo_horas = distancia_km // velocidad_kmh
 tiempo_dias = tiempo_horas // 24
+tiempo_semanas = tiempo_dias// 7
+tiempo_suelosemanas = tiempo_dias % 7
 if tiempo_horas < 1:
     print(f"Tardarías {tiempo_minutos} minutos en llegar.")
 elif tiempo_dias < 1:

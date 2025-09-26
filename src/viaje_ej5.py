@@ -22,15 +22,19 @@ velocidad_kmh = int(input("¿A qué velocidad vas a viajar (km/h)?"))
 tiempo_minutos = (distancia_km / velocidad_kmh) * 60
 tiempo_horas = distancia_km // velocidad_kmh
 tiempo_dias = tiempo_horas // 24
+tiempo_semanas = tiempo_dias// 7
+tiempo_suelosemanas = tiempo_dias % 7
 if tiempo_horas < 1:
     print(f"Tardarías {tiempo_minutos} minutos en llegar.")
 elif tiempo_dias < 1:
     print(f"Tardarías {tiempo_horas} horas en llegar.")
-else:
+elif tiempo_semanas < 1:
     print(f"Tardarías {tiempo_dias} días en llegar.")
+else:
+    print(f"Tardarías {tiempo_semanas} y {tiempo_suelosemanas} días en llegar.")
 
 s_n = input(str("¿Quieres hacer otra simulación? (s/n)"))
-while s_n != "n" or s_n != "s":
+while s_n != "n" and s_n != "s":
     print("Respuesta no válida, tiene que ser s o n")
     s_n = input(str("¿Quieres hacer otra simulación? (s/n)"))
 if s_n  == "s":
@@ -39,12 +43,16 @@ if s_n  == "s":
     tiempo_minutos = (distancia_km / velocidad_kmh) * 60
     tiempo_horas = distancia_km // velocidad_kmh
     tiempo_dias = tiempo_horas // 24
+    tiempo_semanas = tiempo_dias// 7
+    tiempo_suelosemanas = tiempo_dias % 7
     if tiempo_horas < 1:
         print(f"Tardarías {tiempo_minutos} minutos en llegar.")
     elif tiempo_dias < 1:
         print(f"Tardarías {tiempo_horas} horas en llegar.")
-    else:
+    elif tiempo_semanas < 1:
         print(f"Tardarías {tiempo_dias} días en llegar.")
+    else:
+        print(f"Tardarías {tiempo_semanas} y {tiempo_suelosemanas} días en llegar.")
     s_n = input("¿Quieres hacer otra simulación? (s/n)")
 elif s_n == "n":
     sys.exit()
