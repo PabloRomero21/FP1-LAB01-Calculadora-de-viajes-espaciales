@@ -30,7 +30,7 @@ else:
     print(f"Tardarías {tiempo_dias} días en llegar.")
 
 s_n = input(str("¿Quieres hacer otra simulación? (s/n)"))
-while s_n != "n" or "s":
+while s_n != "n" or s_n != "s":
     print("Respuesta no válida, tiene que ser s o n")
     s_n = input(str("¿Quieres hacer otra simulación? (s/n)"))
 if s_n  == "s":
